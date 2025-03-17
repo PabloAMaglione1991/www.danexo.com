@@ -1,821 +1,761 @@
-        :root {
-            
-            /* Colores principales */
-            --primary-color: var(--wp--preset--color--vivid-cyan-blue);
-            --color-secondary: #a87c4d; /* Tonio tierra */
-            --accent-color: var(--wp--preset--color--luminous-vivid-orange);
-            --dark-color: var(--wp--preset--color--black);
-            --light-color: var(--wp--preset--color--white);
-
-            /* Gradientes */
-            --primary-gradient: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple);
-            --accent-gradient: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
-
-            /* Sombras */
-            --card-shadow: var(--wp--preset--shadow--natural);
-            --hover-shadow: var(--wp--preset--shadow--deep);
-
-            /* Espaciado */
-            --section-spacing: var(--wp--preset--spacing--70);
-            --component-spacing: var(--wp--preset--spacing--40);
-
-            /* Fuentes */
-            --small-font: var(--wp--preset--font-size--small);
-            --medium-font: var(--wp--preset--font-size--medium);
-            --large-font: var(--wp--preset--font-size--large);
-
-            /* Colores específicos */
-            --bg-color-soft: #f5f8f5; /* Verde extremadamente suave */
-        }
-
-        /* Estilos generales */
-        body {
-            overflow-x: hidden;
-            background-color: var(--bg-color-soft);
-            font-family: 'Poppins', sans-serif !important;
-        }
-        .bg-light {
-            background-color: #f8f9fa !important;
-        }
-    
-        .text-success {
-            color: var(--color-primary) !important;
-        }
-    
-        /* Botones con tono tierra */
-        .btn-secondary {
-            background: var(--color-secondary);
-            border: none;
-        }
-        h1, h2, h3 {
-            font-weight: 600 !important;
-            letter-spacing: -0.5px;
-        }
-         /* Bordes verdes para TODAS las tarjetas */
-        .card {
-        border: 3px solid var(--bs-success) !important;
-        border-radius: 10px !important;
-        }
-
-        /* Utilidades */
-        .bg-primary-gradient {
-            background: var(--primary-gradient);
-        }
-
-        .bg-accent-gradient {
-            background: var(--accent-gradient);
-        }
-
-        .shadow-custom {
-            box-shadow: var(--card-shadow);
-        }
-
-        .shadow-hover {
-            transition: box-shadow 0.3s ease;
-        }
-
-        .shadow-hover:hover {
-            box-shadow: var(--hover-shadow);
-        }
-
-        /* Animaciones */
-        .transition-all {
-            transition: all 0.3s ease;
-        }
-
-        /* Espaciado */
-        .section-padding {
-            padding: var(--section-spacing) 0;
-        }
-
-        .component-padding {
-            padding: var(--component-spacing);
-        }
-
-        /* Ajustar las secciones que tenían fondo blanco */
-        .bg-white {
-            background-color: var(--bg-color-soft) !important;
-        }
-
-        /* Ajustar las cards y elementos con fondo blanco */
-        .card,
-        .contact-form-card,
-        .contact-info-card {
-            background-color: #ffffff !important; /* Mantener las cards en blanco para contraste */
-        }
-
-        /* Asegurar que las secciones con fondos específicos mantengan sus colores */
-        .hero-section,
-        .footer-section,
-        [class*="bg-primary"],
-        [class*="bg-success"],
-        [class*="bg-dark"] {
-            background-color: initial; /* Mantener sus fondos originales */
-        }
-
-        /* Utilidades */
-        .bg-primary-gradient {
-            background: var(--primary-gradient);
-        }
-
-        .bg-accent-gradient {
-            background: var(--accent-gradient);
-        }
-
-        .shadow-custom {
-            box-shadow: var(--card-shadow);
-        }
-
-        .shadow-hover {
-            transition: box-shadow 0.3s ease;
-        }
-
-        .shadow-hover:hover {
-            box-shadow: var(--hover-shadow);
-        }
-
-        /* Animaciones */
-        .transition-all {
-            transition: all 0.3s ease;
-        }
-
-        /* Espaciado */
-        .section-padding {
-            padding: var(--section-spacing) 0;
-        }
-
-        .component-padding {
-            padding: var(--component-spacing);
-        }
-
-        /* Ajustar las secciones que tenían fondo blanco */
-        .bg-white {
-            background-color: var(--bg-color-soft) !important;
-        }
-
-        /* Ajustar las cards y elementos con fondo blanco */
-        .card,
-        .contact-form-card,
-        .contact-info-card {
-            background-color: #ffffff !important; /* Mantener las cards en blanco para contraste */
-        }
-
-        /* Asegurar que las secciones con fondos específicos mantengan sus colores */
-        .hero-section,
-        .footer-section,
-        [class*="bg-primary"],
-        [class*="bg-success"],
-        [class*="bg-dark"] {
-            background-color: initial; /* Mantener sus fondos originales */
-        }
-
-        /* Estilos para la galería */
-        .gallery-item {
-            height: 250px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-overlay i {
-            color: white;
-            font-size: 2rem;
-            transform: scale(0.5);
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-item:hover .gallery-overlay i {
-            transform: scale(1);
-        }
-
-        .gallery-item img {
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Estilos para los modales */
-        .modal-backdrop.show {
-            opacity: 0.9;
-        }
-
-        .btn-close {
-            background-color: white;
-            opacity: 0.8;
-            border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
-            z-index: 1;
-        }
-
-        .btn-close:hover {
-            opacity: 1;
-        }
-
-        /* Estilos para el hero */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 100px 0;
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider-1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -2;
-        }
-
-        .hero-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-                rgba(0, 0, 0, 0.6),
-                rgba(0, 0, 0, 0.7)
-            );
-            z-index: -1;
-        }
-
-        .hero-background2 {
-            background: 
-                linear-gradient(160deg, #e6f5e6 0%, #c2e0c2 100%), /* Degradado verde claro */
-                url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.2"/%3E%3C/svg%3E'), 
-                linear-gradient(45deg, #28a74533 0%, #20c99733 100%); /* Textura + transparencias */
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        .hero-background2 {
-            background: linear-gradient(45deg, #28a745 0%, #20c997 100%); /* Gradiente verde */
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0.9; /* Transparencia para el texto */
-
-        }
-
-        .hero-section h1 {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra al título */
-        }
-
-        .btn-primary {
-            background: #1a8c5f;
-            border: none;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            background: #136f4a !important;
-            transform: translateY(-2px);
-        }
-        .hero-background2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('../../www.danexo.com/assets/img/WhatsApp-Image-2024-05-27-at-12.50.29.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -2;
-        }
-
-        .hero-background2::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(
-                rgba(0, 0, 0, 0.6),
-                rgba(0, 0, 0, 0.7)
-            );
-            z-index: -1;
-        }
-
-        .hero-section .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-section h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-section h3 {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-section .lead {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-section .btn-primary {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .hero-section .btn-primary:hover {
-            background-color: #45a049;
-            border-color: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Estilos servicios */
-        .servicios-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-        .servicios-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-            z-index: 1;
-        }
-
-        .servicios-section .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .service-card {
-            padding: 20px;
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .service-card:hover {
-            border-color: #4CAF50;
-            transform: translateY(-5px);
-        }
-
-        .icon-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            transition: all 0.3s ease;
-            filter: invert(71%) sepia(40%) saturate(402%) hue-rotate(84deg) brightness(91%) contrast(87%);
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-
-        .service-card h3 {
-            color: #333;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            margin: 0;
-        }
-
-        /* Estilos contacto */
-        .contact-section {
-            background-color: var(--bg-color-soft);
-            position: relative;
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(76, 175, 80, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .form-control {
-            border: 1px solid #dee2e6;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-        }
-
-        .form-control:focus {
-            border-color: #4CAF50;
-            box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
-        }
-
-        .contact-info-card,
-        .contact-form-card {
-            transition: transform 0.3s ease;
-        }
-         /* Sección "Nutrición Animal" - Fondo texturizado */
-    #nutricion-animal {
-        background: 
-            linear-gradient(to right, #f8f9fa 0%, #ffffff 100%),
-            url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h40v40H0z" fill="%23e9ecef" fill-opacity="0.1"/%3E%3C/svg%3E');
-        background-blend-mode: multiply;
-    }
-
-    /* Sección "Aplicaciones Industriales" - Degradado diagonal */
-    #aplicaciones-industriales {
-        background: linear-gradient(
-            15deg,
-            #ffffff 50%,
-            #f1f8f1 100%
+:root {
+    /* Colores principales */
+    --primary-color: #B8CB4D; /* Cambiado de azul a #B8CB4D */
+    --color-secondary: #a87c4d; /* Tonio tierra */
+    --accent-color: var(--wp--preset--color--luminous-vivid-orange);
+    --dark-color: var(--wp--preset--color--black);
+    --light-color: var(--wp--preset--color--white);
+
+    /* Gradientes */
+    --primary-gradient: linear-gradient(135deg, #B8CB4D, #B8CB4D); /* Cambiado de azul a #B8CB4D */
+    --accent-gradient: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+
+    /* Sombras */
+    --card-shadow: var(--wp--preset--shadow--natural);
+    --hover-shadow: var(--wp--preset--shadow--deep);
+
+    /* Espaciado */
+    --section-spacing: var(--wp--preset--spacing--70);
+    --component-spacing: var(--wp--preset--spacing--40);
+
+    /* Fuentes */
+    --small-font: var(--wp--preset--font-size--small);
+    --medium-font: var(--wp--preset--font-size--medium);
+    --large-font: var(--wp--preset--font-size--large);
+
+    /* Colores específicos */
+    --bg-color-soft: #f5f8f5; /* Verde extremadamente suave */
+}
+
+/* Estilos generales */
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-color-soft);
+    font-family: 'Poppins', sans-serif !important;
+}
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.text-success {
+    color: var(--primary-color) !important; /* Cambiado de azul a #B8CB4D */
+}
+
+/* Botones con tono tierra */
+.btn-secondary {
+    background: var(--color-secondary);
+    border: none;
+}
+h1, h2, h3 {
+    font-weight: 600 !important;
+    letter-spacing: -0.5px;
+}
+/* Bordes verdes para TODAS las tarjetas */
+.card {
+    border: 3px solid var(--bs-success) !important;
+    border-radius: 10px !important;
+}
+
+/* Utilidades */
+.bg-primary-gradient {
+    background: var(--primary-gradient); /* Cambiado de azul a #B8CB4D */
+}
+
+.bg-accent-gradient {
+    background: var(--accent-gradient);
+}
+
+.shadow-custom {
+    box-shadow: var(--card-shadow);
+}
+
+.shadow-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/* Animaciones */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Espaciado */
+.section-padding {
+    padding: var(--section-spacing) 0;
+}
+
+.component-padding {
+    padding: var(--component-spacing);
+}
+
+/* Ajustar las secciones que tenían fondo blanco */
+.bg-white {
+    background-color: var(--bg-color-soft) !important;
+}
+
+/* Ajustar las cards y elementos con fondo blanco */
+.card,
+.contact-form-card,
+.contact-info-card {
+    background-color: #ffffff !important; /* Mantener las cards en blanco para contraste */
+}
+
+/* Asegurar que las secciones con fondos específicos mantengan sus colores */
+.hero-section,
+.footer-section,
+[class*="bg-primary"],
+[class*="bg-success"],
+[class*="bg-dark"] {
+    background-color: initial; /* Mantener sus fondos originales */
+}
+
+/* Estilos para la galería */
+.gallery-item {
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-overlay i {
+    color: white;
+    font-size: 2rem;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay i {
+    transform: scale(1);
+}
+
+.gallery-item img {
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilos para los modales */
+.modal-backdrop.show {
+    opacity: 0.9;
+}
+
+.btn-close {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* Estilos para el hero */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.7)
+    );
+    z-index: -1;
+}
+
+.hero-background2 {
+    background: 
+        linear-gradient(160deg, #e6f5e6 0%, #c2e0c2 100%), /* Degradado verde claro */
+        url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3"/%3E%3C/filter%3E%3C/rect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.2"/%3E%3C/svg%3E'), 
+        linear-gradient(45deg, #28a74533 0%, #20c99733 100%); /* Textura + transparencias */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.hero-background2 {
+    background: linear-gradient(45deg, #28a745 0%, #20c997 100%); /* Gradiente verde */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9; /* Transparencia para el texto */
+
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra al título */
+}
+
+.btn-primary {
+    background: #B8CB4D; /* Cambiado de azul a #B8CB4D */
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #136f4a !important;
+    transform: translateY(-2px);
+}
+.hero-background2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../www.danexo.com/assets/img/WhatsApp-Image-2024-05-27-at-12.50.29.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.hero-background2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.7)
+    );
+    z-index: -1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .btn-primary {
+    background-color: #B8CB4D; /* Cambiado de azul a #B8CB4D */
+    border-color: #B8CB4D; /* Cambiado de azul a #B8CB4D */
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos servicios */
+.servicios-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.servicios-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.servicios-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    border-color: #4CAF50;
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    transition: all 0.3s ease;
+    filter: invert(71%) sepia(40%) saturate(402%) hue-rotate(84deg) brightness(91%) contrast(87%);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Estilos contacto */
+.contact-section {
+    background-color: var(--bg-color-soft);
+    position: relative;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.contact-info-card,
+.contact-form-card {
+    transition: transform 0.3s ease;
+}
+/* Sección "Nutrición Animal" - Fondo texturizado */
+#nutricion-animal {
+    background: 
+        linear-gradient(to right, #f8f9fa 0%, #ffffff 100%),
+        url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h40v40H0z" fill="%23e9ecef" fill-opacity="0.1"/%3E%3C/svg%3E');
+    background-blend-mode: multiply;
+}
+
+/* Sección "Aplicaciones Industriales" - Degradado diagonal */
+#aplicaciones-industriales {
+    background: linear-gradient(
+        15deg,
+        #ffffff 50%,
+        #f1f8f1 100%
+    );
+}
+
+/* Footer - Fondo con motivos geométricos sutiles */
+.footer-section {
+    background: 
+        linear-gradient(135deg, #1a3d1a 0%, #0d2b0d 100%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #28a74510 10px,
+            #28a74510 20px
         );
+    color: white;
+}
+
+/* Sección "Beneficios Agricultura" */
+#beneficios-agricultura {
+    position: relative;
+    overflow: hidden;
+}
+
+#beneficios-agricultura::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,165.3C480,171,600,149,720,138.7C840,128,960,128,1080,138.7C1200,149,1320,171,1380,181.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: cover;
+    z-index: 1;
+}
+/* Dividers */
+#nutricion-animal::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    transform: skewY(-2deg); /* Efecto diagonal */
+    z-index: -1;
+}
+
+#aplicaciones-industriales {
+    position: relative;
+    overflow: hidden;
+}
+.contact-info-card:hover,
+.contact-form-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.card {
+    border: 3px solid #28a745 !important;
+    border-radius: 15px !important;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.15) !important;
+}
+
+.icon-circle {
+    background: linear-gradient(45deg, #28a745, #20c997) !important; /* Degradado en íconos */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Estilos para los iconos sociales */
+.social-icon-material {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.social-icon-material i {
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+.social-link-material:hover .social-icon-material {
+    transform: translateY(-5px);
+    background: rgba(76, 175, 80, 0.2);
+}
+
+/* Estilos footer */
+.footer-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid #4CAF50;
+}
+
+/* Estilos para iconos sociales */
+.social-link-material {
+    text-decoration: none;
+}
+
+.social-icon-material {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 2px solid #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.social-icon-material i {
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+.social-link-material:hover .social-icon-material {
+    transform: translateY(-5px);
+    background: rgba(76, 175, 80, 0.2);
+}
+
+/* Estilos para enlaces */
+.hover-link {
+    transition: all 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #4CAF50 !important;
+    transform: translateX(5px);
+}
+
+/* Estilos para el formulario newsletter */
+.newsletter-form .form-control {
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    background: white;
+}
+
+.newsletter-form .form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.newsletter-form .btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    padding: 0.5rem 2rem;
+}
+
+.newsletter-form .btn-success:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* WhatsApp botón */
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+}
+
+#whatsapp circle {
+    fill: #25d366;
+}
+
+#whatsapp path {
+    fill: #fff;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 80px 0;
     }
 
-    /* Footer - Fondo con motivos geométricos sutiles */
-    .footer-section {
-        background: 
-            linear-gradient(135deg, #1a3d1a 0%, #0d2b0d 100%),
-            repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                #28a74510 10px,
-                #28a74510 20px
-            );
-        color: white;
+    .hero-section h1 {
+        font-size: 2.5rem;
     }
 
-    /* Sección "Beneficios Agricultura" */
-    #beneficios-agricultura {
-        position: relative;
-        overflow: hidden;
+    .hero-section h3 {
+        font-size: 1.2rem;
     }
 
-    #beneficios-agricultura::after {
-        content: "";
-        position: absolute;
-        bottom: -50px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="1" d="M0,96L60,112C120,128,240,160,360,165.3C480,171,600,149,720,138.7C840,128,960,128,1080,138.7C1200,149,1320,171,1380,181.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
-        background-size: cover;
-        z-index: 1;
-    }
-        /* Dividers */
-    #nutricion-animal::before {
-        content: "";
-        position: absolute;
-        top: -50px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: white;
-        transform: skewY(-2deg); /* Efecto diagonal */
-        z-index: -1;
+    .hero-section .lead {
+        font-size: 1rem;
     }
 
-    #aplicaciones-industriales {
-        position: relative;
-        overflow: hidden;
+    .hero-section .btn-primary {
+        padding: 12px 30px;
+        font-size: 1rem;
     }
-        .contact-info-card:hover,
-        .contact-form-card:hover {
-            transform: translateY(-5px);
-        }
 
-        .btn-success {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-            transition: all 0.3s ease;
-        }
+    .gallery-item {
+        height: 200px;
+    }
 
-        .btn-success:hover {
-            background-color: #45a049;
-            border-color: #45a049;
-            transform: translateY(-2px);
-        }
+    .service-card {
+        margin-bottom: 20px;
+    }
 
-        .card {
-            border: 3px solid #28a745 !important;
-            border-radius: 15px !important;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-    
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.15) !important;
-        }
-    
-        .icon-circle {
-            background: linear-gradient(45deg, #28a745, #20c997) !important; /* Degradado en íconos */
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        /* Estilos para los iconos sociales */
-        .social-icon-material {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            border: 2px solid #4CAF50;
-            background: rgba(76, 175, 80, 0.1);
-        }
+    .servicios-section {
+        background-attachment: scroll;
+    }
 
-        .social-icon-material i {
-            font-size: 20px;
-            color: #4CAF50;
-        }
+    .contact-info-card,
+    .contact-form-card {
+        margin-bottom: 1rem;
+    }
 
-        .social-link-material:hover .social-icon-material {
-            transform: translateY(-5px);
-            background: rgba(76, 175, 80, 0.2);
-        }
+    .social-icon-material {
+        width: 40px;
+        height: 40px;
+    }
 
-        /* Estilos footer */
-        .footer-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            position: relative;
-            overflow: hidden;
-            border-top: 5px solid #4CAF50;
-        }
+    .social-icon-material i {
+        font-size: 18px;
+    }
+}
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
 
-        /* Estilos para iconos sociales */
-        .social-link-material {
-            text-decoration: none;
-        }
+.card:hover .icon-circle {
+    transform: rotateY(360deg);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.5);
+}
 
-        .social-icon-material {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            border: 2px solid #4CAF50;
-            background: rgba(76, 175, 80, 0.1);
-        }
+.transition-all {
+    transition: all 0.3s ease;
+}
 
-        .social-icon-material i {
-            font-size: 20px;
-            color: #4CAF50;
-            position: relative;
-            z-index: 2;
-            transition: all 0.3s ease;
-        }
+.shadow-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
 
-        .social-link-material:hover .social-icon-material {
-            transform: translateY(-5px);
-            background: rgba(76, 175, 80, 0.2);
-        }
+/* Estilos para la galería */
+.gallery-item {
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
 
-        /* Estilos para enlaces */
-        .hover-link {
-            transition: all 0.3s ease;
-        }
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
 
-        .hover-link:hover {
-            color: #4CAF50 !important;
-            transform: translateX(5px);
-        }
+.gallery-overlay i {
+    color: white;
+    font-size: 2rem;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+}
 
-        /* Estilos para el formulario newsletter */
-        .newsletter-form .form-control {
-            border: 2px solid rgba(76, 175, 80, 0.2);
-            background: white;
-        }
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
 
-        .newsletter-form .form-control:focus {
-            border-color: #4CAF50;
-            box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
-        }
+.gallery-item:hover .gallery-overlay i {
+    transform: scale(1);
+}
 
-        .newsletter-form .btn-success {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-            padding: 0.5rem 2rem;
-        }
+.gallery-item img {
+    transition: all 0.3s ease;
+}
 
-        .newsletter-form .btn-success:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
 
-        /* WhatsApp botón */
-        #whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right:20px;
-        }
+/* Estilos para los modales */
+.modal-backdrop.show {
+    opacity: 0.9;
+}
 
-        #whatsapp circle {
-            fill: #25d366;
-        }
+.btn-close {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+}
 
-        #whatsapp path {
-            fill: #fff;
-        }
+.btn-close:hover {
+    opacity: 1;
+}
 
-        /* Media queries */
-        @media (max-width: 768px) {
-            .hero-section {
-                min-height: 80vh;
-                padding: 80px 0;
-            }
-
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-section h3 {
-                font-size: 1.2rem;
-            }
-
-            .hero-section .lead {
-                font-size: 1rem;
-            }
-
-            .hero-section .btn-primary {
-                padding: 12px 30px;
-                font-size: 1rem;
-            }
-
-            .gallery-item {
-                height: 200px;
-            }
-
-            .service-card {
-                margin-bottom: 20px;
-            }
-
-            .servicios-section {
-                background-attachment: scroll;
-            }
-
-            .contact-info-card,
-            .contact-form-card {
-                margin-bottom: 1rem;
-            }
-
-            .social-icon-material {
-                width: 40px;
-                height: 40px;
-            }
-
-            .social-icon-material i {
-                font-size: 18px;
-            }
-        }
-        .icon-circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
-        }
-
-        .card:hover .icon-circle {
-            transform: rotateY(360deg);
-            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.5);
-        }
-
-        .transition-all {
-            transition: all 0.3s ease;
-        }
-
-        .shadow-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-        }
-
-        /* Estilos para la galería */
-        .gallery-item {
-            height: 250px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-overlay i {
-            color: white;
-            font-size: 2rem;
-            transform: scale(0.5);
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-item:hover .gallery-overlay i {
-            transform: scale(1);
-        }
-
-        .gallery-item img {
-            transition: all 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Estilos para los modales */
-        .modal-backdrop.show {
-            opacity: 0.9;
-        }
-
-        .btn-close {
-            background-color: white;
-            opacity: 0.8;
-            border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
-            z-index: 1;
-        }
-
-        .btn-close:hover {
-            opacity: 1;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .gallery-item {
-                height: 200px;
-            }
-        }
+/* Media Queries */
+@media (max-width: 768px) {
+    .gallery-item {
+        height: 200px;
+    }
+}
