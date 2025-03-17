@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tierra de Diatomeas: Beneficios y Usos | Danexo" />
+    <title>Tierra de Diatomeas: Beneficios y Usos | Danexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        as="script" />
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        /* Bordes verdes para TODAS las tarjetas */
+        .card {
+            border: 3px solid var(--bs-success) !important;
+            border-radius: 10px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="bg-dark text-white py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="tel:+5493416103411" class="text-white text-decoration-none d-flex align-items-center">
+                        <i class="fas fa-phone me-2"></i>
+                        <span>+54 9 341 610-3411</span>
+                    </a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="mailto:danexo.ventas@gmail.com"
+                        class="text-white text-decoration-none d-flex align-items-center justify-content-md-end">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>danexo.ventas@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="../assets/img/logo.jpg" alt="Danexo" height="60" contenteditable="d-inline-block align-top" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Beneficios y Usos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#beneficios-agricultura">
+                                    Beneficios en la Agricultura
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#nutricion-animal">
+                                    Usos en la Nutrición Animal
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#aplicaciones-industriales">
+                                    Aplicaciones Industriales
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Nuestros Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="tsparticles" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div>
+    <section class="hero-section text-center" id="home">
+        <div class="hero-background2"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="h4 mb-3 text-white">
+                        Líderes en producción y distribución de
+                    </h3>
+                    <h1 class="display-3 mb-4 text-white fw-bold">
+                        Tierra de Diatomeas
+                    </h1>
+                    <p class="lead mb-4 text-white">
+                        La tierra de diatomeas es un recurso versátil y ecológico con
+                        beneficios significativos en la agricultura, la nutrición animal y
+                        diversas aplicaciones industriales y domésticas.
+                    </p>
+                    <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3">
+                        MÁS INFORMACIÓN
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Teléfono -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-hover transition-all">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-phone fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Teléfono</h3>
+                            <a href="tel:+5493416103411" class="text-decoration-none text-body">
+                                <p class="mb-0">+54 9 341 610-3411</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-hover transition-all">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Email</h3>
+                            <a href="mailto:danexo.ventas@gmail.com" class="text-decoration-none text-body">
+                                <p class="mb-0">danexo.ventas@gmail.com</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dirección -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-hover transition-all">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-location-dot fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Dirección</h3>
+                            <p class="mb-0">9 de Julio 42<br />Piñero - Santa Fe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido específico sobre Tierra de Diatomeas -->
+    <!-- Beneficios en la Agricultura -->
+    <section id="beneficios-agricultura" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 mb-3">Beneficios en la Agricultura</h2>
+                    <p class="lead">
+                        La tierra de diatomeas ofrece múltiples beneficios en el sector
+                        agrícola.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Control de Plagas -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-bug fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Control de Plagas</h3>
+                            <p class="mb-0">
+                                La tierra de diatomeas actúa como un insecticida natural,
+                                eliminando plagas como ácaros, pulgones y hormigas sin dañar
+                                el medio ambiente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mejora del Suelo -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-seedling fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Mejora del Suelo</h3>
+                            <p class="mb-0">
+                                Mejora la estructura del suelo, aumentando la retención de
+                                agua y nutrientes, lo que favorece el crecimiento de las
+                                plantas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aporte de Silicio -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-leaf fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Aporte de Silicio</h3>
+                            <p class="mb-0">
+                                Proporciona silicio, un nutriente esencial que fortalece las
+                                plantas y las hace más resistentes a enfermedades y estrés
+                                ambiental.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usos en la Nutrición Animal -->
+    <section id="nutricion-animal" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 mb-3">Usos en la Nutrición Animal</h2>
+                    <p class="lead">
+                        La tierra de diatomeas es un suplemento natural para la
+                        alimentación animal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Control de Parásitos -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-hover transition-all">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-bug fa-2x"></i> <!-- Icono corregido -->
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Control de Parásitos</h3>
+                            <p class="mb-0">
+                                Elimina parásitos internos y externos en animales...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mejora de la Digestión -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-hover transition-all">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-hand-holding-medical fa-2x"></i> <!-- Icono corregido -->
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Mejora de la Digestión</h3>
+                            <p class="mb-0">
+                                Ayuda a mejorar la digestión...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suplemento Mineral -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-bone fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Suplemento Mineral</h3>
+                            <p class="mb-0">
+                                Proporciona minerales esenciales que fortalecen el sistema
+                                inmunológico de los animales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aplicaciones Industriales -->
+    <section id="aplicaciones-industriales" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 mb-3">Aplicaciones Industriales</h2>
+                    <p class="lead">
+                        La tierra de diatomeas tiene múltiples usos en la industria.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Filtración de Líquidos -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-filter fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Filtración de Líquidos</h3>
+                            <p class="mb-0">
+                                Se utiliza en la filtración de líquidos como cerveza, vino y
+                                aceites, gracias a su capacidad para retener impurezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Absorbente de Derrames -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-oil-can fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Absorbente de Derrames</h3>
+                            <p class="mb-0">
+                                Es un absorbente natural para derrames de líquidos peligrosos,
+                                como aceites y químicos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aislamiento Térmico -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
+                        <div class="card-body p-4">
+                            <div class="icon-wrapper mb-3">
+                                <div class="icon-circle bg-primary-gradient text-white">
+                                    <i class="fas fa-fire fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Aislamiento Térmico</h3>
+                            <p class="mb-0">
+                                Se utiliza como material aislante en la construcción y en la
+                                industria debido a sus propiedades térmicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 text-dark mb-2">¡Contáctanos!</h2>
+                <p class="lead text-muted">
+                    Estamos aquí para responder tus consultas
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-between">
+                <!-- Información de Contacto -->
+                <div class="col-lg-4">
+                    <div class="contact-info-card h-100 p-4 bg-white rounded-3 shadow-sm">
+                        <h3 class="h4 mb-4 text-success">Información de Contacto</h3>
+
+                        <!-- Lista de contactos -->
+                        <div class="contact-list">
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon me-3">
+                                        <i class="fas fa-phone text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-1">Teléfono</h4>
+                                        <a href="tel:+5493416103411" class="text-dark text-decoration-none">
+                                            +54 9 341 610-3411
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon me-3">
+                                        <i class="fas fa-envelope text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-1">Email</h4>
+                                        <a href="mailto:danexo.ventas@gmail.com" class="text-dark text-decoration-none">
+                                            danexo.ventas@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-icon me-3">
+                                        <i class="fas fa-location-dot text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-1">Dirección</h4>
+                                        <p class="mb-0">9 de Julio 42<br />Piñero - Santa Fe</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div class="mt-5">
+                            <h4 class="h6 mb-4">Síguenos en:</h4>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="social-link-material">
+                                    <div class="social-icon-material">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-link-material">
+                                    <div class="social-icon-material">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-link-material">
+                                    <div class="social-icon-material">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card bg-white rounded-3 shadow-sm p-4">
+                        <h3 class="h4 mb-4 text-success">Envíanos un mensaje</h3>
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre" class="form-label">Nombre completo</label>
+                                        <input type="text" class="form-control" id="nombre" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="asunto" class="form-label">Asunto</label>
+                                        <input type="text" class="form-control" id="asunto" required />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="mensaje" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success w-100 py-3">
+                                        Enviar Mensaje
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <!-- Sección Principal del Footer -->
+            <div class="row g-4 mb-4">
+                <!-- Columna de Información de la Empresa -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="../assets/img/logo.jpg" alt="Danexo" class="img-fluid mb-4" style="max-height: 80px" />
+                    <p class="mb-4 text-muted">
+                        Líderes en producción y distribución de tierras diatomeas.
+                        Comprometidos con la calidad y la excelencia en cada uno de
+                        nuestros productos y servicios.
+                    </p>
+                    <div class="social-icons-large d-flex gap-4">
+                        <a href="#" class="social-link-material" aria-label="Facebook">
+                            <div class="social-icon-material">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-link-material" aria-label="Instagram">
+                            <div class="social-icon-material">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-link-material" aria-label="WhatsApp">
+                            <div class="social-icon-material">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-dark mb-4">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-3">
+                            <a href="#home" class="text-muted text-decoration-none hover-link">
+                                <i class="fas fa-chevron-right me-2 small"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#sobre-nosotros" class="text-muted text-decoration-none hover-link">
+                                <i class="fas fa-chevron-right me-2 small"></i>Sobre Nosotros
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#servicios" class="text-muted text-decoration-none hover-link">
+                                <i class="fas fa-chevron-right me-2 small"></i>Servicios
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#contacto" class="text-muted text-decoration-none hover-link">
+                                <i class="fas fa-chevron-right me-2 small"></i>Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-6 col-md-12">
+                    <h5 class="text-dark mb-4">Newsletter</h5>
+                    <p class="text-muted mb-4">
+                        Suscríbete para recibir las últimas novedades y actualizaciones.
+                    </p>
+                    <form class="newsletter-form mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-lg" placeholder="Tu email"
+                                aria-label="Tu email" required />
+                            <button class="btn btn-success btn-lg" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-5 pt-4 border-top border-success">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-muted">
+                        &copy; 2024 <strong class="text-dark">Danexo</strong>. Todos los
+                        derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted text-decoration-none me-3 hover-link">
+                        Términos y Condiciones
+                    </a>
+                    <a href="#" class="text-muted text-decoration-none hover-link">
+                        Política de Privacidad
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=5493416103411&text=¡Hola!%0AQuisiera información sobre TIERRAS DIATOMEAS"
+        class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <div id="whatsapp">
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="whatsapp"
+                class="svg-inline--fa fa-whatsapp fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                </path>
+            </svg>
+        </div>
+    </a>
+
+    <!-- Botón Volver Arriba -->
+    <button id="btnVolverArriba" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4"
+        style="display: none; z-index: 999" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts necesarios -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Validación del formulario
+            const form = document.getElementById("contactForm");
+            if (form) {
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    if (!form.checkValidity()) {
+                        event.stopPropagation();
+                    } else {
+                        // Aquí puedes agregar la lógica para enviar el formulario
+                        alert("Mensaje enviado correctamente");
+                        form.reset();
+                    }
+                    form.classList.add("was-validated");
+                });
+            }
+
+            // Botón Volver Arriba
+            const btnVolverArriba = document.getElementById("btnVolverArriba");
+            if (btnVolverArriba) {
+                window.onscroll = function () {
+                    if (
+                        document.body.scrollTop > 20 ||
+                        document.documentElement.scrollTop > 20
+                    ) {
+                        btnVolverArriba.style.display = "block";
+                    } else {
+                        btnVolverArriba.style.display = "none";
+                    }
+                };
+
+                btnVolverArriba.addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                });
+            }
+
+            // Smooth Scroll para todos los enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
+            });
+
+            // Newsletter Form
+            const newsletterForm = document.querySelector(".newsletter-form");
+            if (newsletterForm) {
+                newsletterForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    alert("¡Gracias por suscribirte a nuestro newsletter!");
+                    this.reset();
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
+<script>
+    tsParticles.load("tsparticles", {
+        particles: {
+            number: { value: 30 },
+            color: { value: "#28a745" },
+            opacity: { value: 0.3 },
+            size: { value: 1 },
+            move: {
+                enable: true,
+                speed: 0.5,
+                direction: "none",
+                random: true,
+            },
+        },
+        background: {
+            color: "transparent",
+        },
+    });
+</script>
+
+</body>
+
+</html>
