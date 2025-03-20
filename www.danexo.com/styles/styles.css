@@ -190,7 +190,7 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider-1.jpg');
+    background-image: url('../../../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider-1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -314,7 +314,7 @@ h1, h2, h3 {
 /* Estilos servicios */
 .servicios-section {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider.jpg');
+                url('../assets/img/tierra-de-diatomeas-slider.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -614,6 +614,579 @@ h1, h2, h3 {
     fill: #fff;
 }
 
+/* Estilos actualizados para el footer */
+.footer-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid #4CAF50;
+}
+
+/* Estilos para iconos sociales */
+.social-link-material {
+    text-decoration: none;
+}
+
+.social-icon-material {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 2px solid #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.social-icon-material i {
+    font-size: 20px;
+    color: #4CAF50;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.social-link-material:hover .social-icon-material {
+    transform: translateY(-5px);
+    background: rgba(76, 175, 80, 0.2);
+}
+
+/* Estilos para enlaces */
+.hover-link {
+    transition: all 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #4CAF50 !important;
+    transform: translateX(5px);
+}
+
+/* Estilos para el formulario newsletter */
+.newsletter-form .form-control {
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    background: white;
+}
+
+.newsletter-form .form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.newsletter-form .btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    padding: 0.5rem 2rem;
+}
+
+.newsletter-form .btn-success:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .social-icon-material {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon-material i {
+        font-size: 18px;
+    }
+}            .contact-section {
+    background-color: var(--bg-color-soft);
+    position: relative;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+.contact-info-card,
+.contact-form-card {
+    transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover,
+.contact-form-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Estilos para los iconos sociales */
+.social-icon-material {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.social-icon-material i {
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+.social-link-material:hover .social-icon-material {
+    transform: translateY(-5px);
+    background: rgba(76, 175, 80, 0.2);
+}
+
+@media (max-width: 768px) {
+
+    .contact-info-card,
+    .contact-form-card {
+        margin-bottom: 1rem;
+    }
+}
+.servicios-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../../../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.servicios-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.servicios-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    border-color: #4CAF50;
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    transition: all 0.3s ease;
+    filter: invert(71%) sepia(40%) saturate(402%) hue-rotate(84deg) brightness(91%) contrast(87%);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+.beneficios-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+.row-equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.beneficio-card {
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #4CAF50;
+}
+
+.beneficio-icon-wrapper {
+    text-align: center;
+    padding: 25px 0 15px 0;
+}
+
+.beneficio-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.beneficio-card:hover .beneficio-icon {
+    transform: scale(1.1);
+}
+
+.beneficio-content {
+    padding: 0 25px 25px 25px;
+}
+
+.beneficio-title {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.beneficio-description {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.beneficio-button {
+    text-align: center;
+}
+
+.beneficio-button .btn {
+    padding: 10px 25px;
+    font-weight: 500;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+/* Bordes verdes para TODAS las tarjetas */
+.card {
+    border: 3px solid var(--bs-success) !important;
+    border-radius: 10px !important;
+}
+card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    color: white;
+}
+/* Nueva sección video-texto */
+.video-section {
+    padding: 100px 0;
+    background: linear-gradient(to right, #f8f9fa 50%, #ffffff 50%);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-content {
+    padding-right: 40px;
+}
+
+
+        .icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            color: white;
+        }
+        /* Nueva sección video-texto */
+        .video-section {
+            padding: 100px 0;
+            background: linear-gradient(to right, #f8f9fa 50%, #ffffff 50%);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-content {
+            padding-right: 40px;
+        }
+        /* Bordes verdes para TODAS las tarjetas */
+        .card {
+            border: 3px solid var(--bs-success) !important;
+            border-radius: 10px !important;
+        }
+        card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            color: white;
+        }
+        /* Nueva sección video-texto */
+        .video-section {
+            padding: 100px 0;
+            background: linear-gradient(to right, #f8f9fa 50%, #ffffff 50%);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-content {
+            padding-right: 40px;
+        }
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.7));
+    z-index: -1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 80px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .hero-section .btn-primary {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+.beneficio-button .btn:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 991px) {
+    .beneficio-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px;
+    }
+
+    .servicios-section {
+        background-attachment: scroll;
+    }
+}
+
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    circle {
+        fill: #25d366;
+    }
+
+    path {
+        fill: #fff;
+    }
+}
 /* Media queries */
 @media (max-width: 768px) {
     .hero-section {

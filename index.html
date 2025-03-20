@@ -26,63 +26,152 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="../www.danexo.com/www.danexo.com/assets/img/logo.jpg" alt="Danexo" height="60"
-                    contenteditable="d-inline-block align-top">
-            </a>
+<!-- Navigation - Versión Delgada -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm slim-nav">
+    <div class="container">
+        <!-- Logo compacto -->
+        <a class="navbar-brand py-0" href="#home">
+            <img src="../www.danexo.com/www.danexo.com/assets/img/logo.jpg" alt="Danexo" 
+                 class="nav-logo img-fluid" style="height: 40px;">
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Botón hamburguesa compacto -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#Beneficios" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Beneficios y Usos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item"
-                                    href="../www.danexo.com/www.danexo.com/tierra-de-diatomeas-beneficios-y-usos/index-beneficios.html">
-                                    Beneficios en la Agricultura
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="../www.danexo.com/www.danexo.com/tierra-de-diatomeas-beneficios-y-usos/index-beneficios.html">
-                                    Usos en la Nutrición Animal
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="../www.danexo.com/www.danexo.com/tierra-de-diatomeas-beneficios-y-usos/index-beneficios.html">
-                                    Aplicaciones Industriales
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Nuestros Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <!-- Elementos del menú compactos -->
+                <li class="nav-item mx-2">
+                    <a class="nav-link nav-link-slim position-relative" href="#home">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link nav-link-slim position-relative" href="#sobre-nosotros">Sobre Nosotros</a>
+                </li>
+                
+                <!-- Dropdown compacto -->
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link nav-link-slim dropdown-toggle position-relative" 
+                       href="#Beneficios" role="button" data-bs-toggle="dropdown" 
+                       aria-expanded="false">
+                        Beneficios
+                    </a>
+                    <ul class="dropdown-menu dropdown-slim">
+                        <li>
+                            <a class="dropdown-item py-2" 
+                               href="../www.danexo.com/www.danexo.com/tierra-de-diatomeas-beneficios-y-usos/index-beneficios.html">
+                                Agricultura
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider mx-3 my-1"></li>
+                        <li>
+                            <a class="dropdown-item py-2" 
+                               href="../www.danexo.com/www.danexo.com/tierra-de-diatomeas-beneficios-y-usos/index-beneficios.html">
+                                Nutrición Animal
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider mx-3 my-1"></li>
+                        <li>
+                            <a class="dropdown-item py-2" 
+                               href="../www.danexo.com/www.danexo.com/tierra-de-diatomeas-beneficios-y-usos/index-beneficios.html">
+                                Industrial
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item mx-2">
+                    <a class="nav-link nav-link-slim position-relative" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link nav-link-slim position-relative" href="#contacto">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
+<style>
+:root {
+    --nav-height: 60px;
+    --logo-height: 40px;
+    --font-size: 0.9rem;
+}
+
+/* Navbar principal */
+.slim-nav {
+    min-height: var(--nav-height);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+/* Elementos del menú */
+.nav-link-slim {
+    font-size: var(--font-size);
+    padding: 0.4rem 0.75rem !important;
+    color: #333 !important;
+    transition: all 0.2s ease;
+}
+
+.nav-link-slim::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link-slim:hover::after {
+    width: 100%;
+}
+
+/* Dropdown compacto */
+.dropdown-slim {
+    margin-top: 0.5rem !important;
+    border: 1px solid rgba(0,0,0,0.05);
+    min-width: 180px;
+}
+
+.dropdown-slim .dropdown-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Ajustes responsive */
+@media (max-width: 991px) {
+    .slim-nav {
+        min-height: 50px;
+    }
+    
+    .nav-logo {
+        height: 35px !important;
+    }
+    
+    .navbar-nav {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-item {
+        margin: 0.25rem 0 !important;
+    }
+    
+    .nav-link-slim {
+        padding: 0.3rem 0.5rem !important;
+    }
+}
+
+/* Botón toggler ajustado */
+.custom-toggler {
+    padding: 0.25rem 0.5rem;
+    border-width: 1px;
+}
+</style>
 
     <!-- Hero Section -->
     <section class="hero-section text-center" id="home">
@@ -105,107 +194,6 @@
                 </div>
             </div>
         </div>
-
-        <style>
-            .hero-section {
-                position: relative;
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                padding: 100px 0;
-                overflow: hidden;
-            }
-
-            .hero-background {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-image: url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider-1.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                z-index: -2;
-            }
-
-            .hero-background::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(rgba(0, 0, 0, 0.6),
-                        rgba(0, 0, 0, 0.7));
-                z-index: -1;
-            }
-
-            .hero-section .container {
-                position: relative;
-                z-index: 1;
-            }
-
-            .hero-section h1 {
-                font-size: 4rem;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            }
-
-            .hero-section h3 {
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            }
-
-            .hero-section .lead {
-                font-size: 1.25rem;
-                max-width: 800px;
-                margin: 0 auto;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            }
-
-            .hero-section .btn-primary {
-                background-color: #4CAF50;
-                border-color: #4CAF50;
-                padding: 15px 40px;
-                font-size: 1.1rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                transition: all 0.3s ease;
-            }
-
-            .hero-section .btn-primary:hover {
-                background-color: #45a049;
-                border-color: #45a049;
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            }
-
-            @media (max-width: 768px) {
-                .hero-section {
-                    min-height: 80vh;
-                    padding: 80px 0;
-                }
-
-                .hero-section h1 {
-                    font-size: 2.5rem;
-                }
-
-                .hero-section h3 {
-                    font-size: 1.2rem;
-                }
-
-                .hero-section .lead {
-                    font-size: 1rem;
-                }
-
-                .hero-section .btn-primary {
-                    padding: 12px 30px;
-                    font-size: 1rem;
-                }
-            }
-        </style>
     </section>
 
 
@@ -341,86 +329,6 @@
                 </div>
             </div>
         </div>
-
-        <style>
-            .beneficios-section {
-                background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-                position: relative;
-            }
-
-            .row-equal-height {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .beneficio-card {
-                border: 2px solid rgba(76, 175, 80, 0.2);
-                border-radius: 10px;
-                overflow: hidden;
-                transition: all 0.3s ease;
-                background-color: white;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            }
-
-            .beneficio-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                border-color: #4CAF50;
-            }
-
-            .beneficio-icon-wrapper {
-                text-align: center;
-                padding: 25px 0 15px 0;
-            }
-
-            .beneficio-icon {
-                display: inline-block;
-                transition: all 0.3s ease;
-            }
-
-            .beneficio-card:hover .beneficio-icon {
-                transform: scale(1.1);
-            }
-
-            .beneficio-content {
-                padding: 0 25px 25px 25px;
-            }
-
-            .beneficio-title {
-                color: #4CAF50;
-                font-size: 1.5rem;
-                margin-bottom: 15px;
-                font-weight: 600;
-            }
-
-            .beneficio-description {
-                color: #666;
-                margin-bottom: 25px;
-            }
-
-            .beneficio-button {
-                text-align: center;
-            }
-
-            .beneficio-button .btn {
-                padding: 10px 25px;
-                font-weight: 500;
-                border-width: 2px;
-                transition: all 0.3s ease;
-            }
-
-            .beneficio-button .btn:hover {
-                background-color: #4CAF50;
-                color: white;
-                transform: translateY(-3px);
-            }
-
-            @media (max-width: 991px) {
-                .beneficio-card {
-                    margin-bottom: 30px;
-                }
-            }
-        </style>
     </section>
 
     <!-- Galería de Imágenes -->
@@ -547,81 +455,6 @@
                 </div>
             </div>
         </div>
-
-        <style>
-            .servicios-section {
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                    url('../www.danexo.com/www.danexo.com/assets/img/tierra-de-diatomeas-slider.jpg');
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed;
-                position: relative;
-            }
-
-            .servicios-section::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-                z-index: 1;
-            }
-
-            .servicios-section .container {
-                position: relative;
-                z-index: 2;
-            }
-
-            .service-card {
-                padding: 20px;
-                background: white;
-                border: 1px solid #e0e0e0;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-                height: 100%;
-            }
-
-            .service-card:hover {
-                border-color: #4CAF50;
-                transform: translateY(-5px);
-            }
-
-            .icon-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .service-icon {
-                width: 64px;
-                height: 64px;
-                transition: all 0.3s ease;
-                filter: invert(71%) sepia(40%) saturate(402%) hue-rotate(84deg) brightness(91%) contrast(87%);
-            }
-
-            .service-card:hover .service-icon {
-                transform: scale(1.1);
-            }
-
-            .service-card h3 {
-                color: #333;
-                font-size: 0.9rem;
-                line-height: 1.4;
-                margin: 0;
-            }
-
-            @media (max-width: 768px) {
-                .service-card {
-                    margin-bottom: 20px;
-                }
-
-                .servicios-section {
-                    background-attachment: scroll;
-                }
-            }
-        </style>
     </section>
 
     <!-- Sección de Contacto -->
@@ -647,8 +480,8 @@
                                     </div>
                                     <div>
                                         <h4 class="h6 mb-1">Teléfono</h4>
-                                        <a href="tel:+5493416103411" class="text-dark text-decoration-none">
-                                            +54 9 341 610-3411
+                                        <a href="tel:+5493424464098" class="text-dark text-decoration-none">
+                                            +54 9 342 446-4098
                                         </a>
                                     </div>
                                 </div>
@@ -695,7 +528,7 @@
                                         <i class="fab fa-instagram"></i>
                                     </div>
                                 </a>
-                                <a href="https://wa.me/+5493416103411?text=Hola%20quiero%20saber%20más%20sobre%20tus%20servicios" class="social-link-material">
+                                <a href="https://wa.me/+5493424464098?text=Hola%20quiero%20saber%20más%20sobre%20tus%20servicios" class="social-link-material">
                                     <div class="social-icon-material">
                                         <i class="fab fa-whatsapp"></i>
                                     </div>
@@ -746,100 +579,6 @@
                 </div>
             </div>
         </div>
-        <style>
-            .contact-section {
-                background-color: var(--bg-color-soft);
-                position: relative;
-            }
-
-            .contact-icon {
-                width: 40px;
-                height: 40px;
-                background-color: rgba(76, 175, 80, 0.1);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .form-control {
-                border: 1px solid #dee2e6;
-                padding: 0.75rem;
-                border-radius: 0.5rem;
-            }
-
-            .form-control:focus {
-                border-color: #4CAF50;
-                box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
-            }
-
-            .contact-info-card,
-            .contact-form-card {
-                transition: transform 0.3s ease;
-            }
-
-            .contact-info-card:hover,
-            .contact-form-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .btn-success {
-                background-color: #4CAF50;
-                border-color: #4CAF50;
-                transition: all 0.3s ease;
-            }
-
-            .btn-success:hover {
-                background-color: #45a049;
-                border-color: #45a049;
-                transform: translateY(-2px);
-            }
-
-            /* Estilos para los iconos sociales */
-            .social-icon-material {
-                width: 45px;
-                height: 45px;
-                border-radius: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s ease;
-                border: 2px solid #4CAF50;
-                background: rgba(76, 175, 80, 0.1);
-            }
-
-            .social-icon-material i {
-                font-size: 20px;
-                color: #4CAF50;
-            }
-
-            .social-link-material:hover .social-icon-material {
-                transform: translateY(-5px);
-                background: rgba(76, 175, 80, 0.2);
-            }
-
-            @media (max-width: 768px) {
-
-                .contact-info-card,
-                .contact-form-card {
-                    margin-bottom: 1rem;
-                }
-            }
-
-            #whatsapp {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-
-                circle {
-                    fill: #25d366;
-                }
-
-                path {
-                    fill: #fff;
-                }
-            }
-        </style>
     </section>
     <div id="whatsapp">
         <a href="#" target="_blank">
@@ -877,7 +616,7 @@
                                 <i class="fab fa-instagram"></i>
                             </div>
                         </a>
-                        <a href="https://wa.me/+5493416103411?text=Hola%20quiero%20saber%20más%20sobre%20tus%20servicios" class="social-link-material" aria-label="WhatsApp">
+                        <a href="https://wa.me/+5493424464098?text=Hola%20quiero%20saber%20más%20sobre%20tus%20servicios" class="social-link-material" aria-label="WhatsApp">
                             <div class="social-icon-material">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
@@ -948,89 +687,6 @@
             </div>
         </div>
 
-        <style>
-            /* Estilos actualizados para el footer */
-            .footer-section {
-                background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-                position: relative;
-                overflow: hidden;
-                border-top: 5px solid #4CAF50;
-            }
-
-            /* Estilos para iconos sociales */
-            .social-link-material {
-                text-decoration: none;
-            }
-
-            .social-icon-material {
-                width: 45px;
-                height: 45px;
-                border-radius: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                position: relative;
-                border: 2px solid #4CAF50;
-                background: rgba(76, 175, 80, 0.1);
-            }
-
-            .social-icon-material i {
-                font-size: 20px;
-                color: #4CAF50;
-                position: relative;
-                z-index: 2;
-                transition: all 0.3s ease;
-            }
-
-            .social-link-material:hover .social-icon-material {
-                transform: translateY(-5px);
-                background: rgba(76, 175, 80, 0.2);
-            }
-
-            /* Estilos para enlaces */
-            .hover-link {
-                transition: all 0.3s ease;
-            }
-
-            .hover-link:hover {
-                color: #4CAF50 !important;
-                transform: translateX(5px);
-            }
-
-            /* Estilos para el formulario newsletter */
-            .newsletter-form .form-control {
-                border: 2px solid rgba(76, 175, 80, 0.2);
-                background: white;
-            }
-
-            .newsletter-form .form-control:focus {
-                border-color: #4CAF50;
-                box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
-            }
-
-            .newsletter-form .btn-success {
-                background-color: #4CAF50;
-                border-color: #4CAF50;
-                padding: 0.5rem 2rem;
-            }
-
-            .newsletter-form .btn-success:hover {
-                background-color: #45a049;
-                transform: translateY(-2px);
-            }
-
-            @media (max-width: 768px) {
-                .social-icon-material {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                .social-icon-material i {
-                    font-size: 18px;
-                }
-            }
-        </style>
     </footer>
     <!-- Botón de WhatsApp -->
     <a href="https://api.whatsapp.com/send/?phone=5493416103411&text=¡Hola!%0AQuisiera información sobre TIERRAS DIATOMEAS"

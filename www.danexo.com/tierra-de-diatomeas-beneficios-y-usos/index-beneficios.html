@@ -8,7 +8,7 @@
     <title>Tierra de Diatomeas: Beneficios y Usos | Danexo</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../../../www.danexo.com/www.danexo.com/styles/styles.css" />
     <!-- Preload de recursos críticos -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" />
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -23,6 +23,56 @@
             border: 3px solid var(--bs-success) !important;
             border-radius: 10px !important;
         }
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            color: white;
+        }
+        /* Nueva sección video-texto */
+        .video-section {
+            padding: 100px 0;
+            background: linear-gradient(to right, #f8f9fa 50%, #ffffff 50%);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-content {
+            padding-right: 40px;
+        }
     </style>
 </head>
 
@@ -32,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="tel:+5493416103411" class="text-white text-decoration-none d-flex align-items-center">
+                    <a href="tel:+5493424464098" class="text-white text-decoration-none d-flex align-items-center">
                         <i class="fas fa-phone me-2"></i>
                         <span>+54 9 341 610-3411</span>
                     </a>
@@ -48,45 +98,143 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="../assets/img/logo.jpg" alt="Danexo" height="60" contenteditable="d-inline-block align-top" />
-            </a>
+<!-- Navbar Ultra Delgado -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm slim-nav-v2">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <img src="../assets/img/logo.jpg" alt="Danexo" 
+                 class="nav-logo img-fluid" style="height: 35px;">
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler micro-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#beneficios-agricultura">
-                            Beneficios en la Agricultura
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nutricion-animal">
-                            Usos en la Nutrición Animal
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#aplicaciones-industriales">
-                            Aplicaciones Industriales
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item mx-1">
+                    <a class="nav-link nano-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item mx-1 separator">
+                    <a class="nav-link nano-link" href="#beneficios-agricultura">Agricultura</a>
+                </li>
+                <li class="nav-item mx-1 separator">
+                    <a class="nav-link nano-link" href="#nutricion-animal">Nutrición Animal</a>
+                </li>
+                <li class="nav-item mx-1 separator">
+                    <a class="nav-link nano-link" href="#aplicaciones-industriales">Industrial</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link nano-cta" href="#contacto">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
+<style>
+:root {
+    --nav-height: 50px;
+    --divider-color: rgba(0, 0, 0, 0.1);
+}
+
+.slim-nav-v2 {
+    min-height: var(--nav-height);
+    padding: 0;
+}
+
+.nav-logo {
+    transition: transform 0.2s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.03);
+}
+
+.nano-link {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem !important;
+    color: #444 !important;
+    position: relative;
+    font-weight: 500;
+}
+
+.nano-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #2a6f5b;
+    transition: width 0.25s ease;
+}
+
+.nano-link:hover::after {
+    width: 100%;
+}
+
+.separator:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: -0.7rem;
+    color: var(--divider-color);
+    font-size: 0.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nano-cta {
+    font-size: 0.85rem !important;
+    padding: 0.3rem 1rem !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    margin-left: 0.5rem !important;
+    transition: all 0.2s ease;
+}
+
+.nano-cta:hover {
+    background: #2a6f5b;
+    color: white !important;
+    border-color: transparent;
+}
+
+.micro-toggler {
+    padding: 0.15rem 0.3rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: scale(0.9);
+}
+
+@media (max-width: 991px) {
+    .slim-nav-v2 {
+        min-height: 45px;
+    }
+    
+    .nav-logo {
+        height: 30px !important;
+    }
+    
+    .navbar-nav {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-item {
+        margin: 0.25rem 0 !important;
+    }
+    
+    .separator::after {
+        display: none;
+    }
+    
+    .nano-cta {
+        margin: 0.5rem 0 0 0 !important;
+    }
+}
+</style>
 
     <!-- Hero Section -->
     <div id="tsparticles" style="position: absolute; width: 100%; height: 100%; z-index: 0;"></div>
@@ -114,227 +262,225 @@
             </div>
         </div>
     </section>
+    <!-- Agrega esta sección después del Hero Section -->
+
 
     <!-- Contenido específico sobre Tierra de Diatomeas -->
     <!-- Beneficios en la Agricultura -->
-    <section id="beneficios-agricultura" class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="display-5 mb-3">Beneficios en la Agricultura</h2>
-                    <p class="lead">
-                        La tierra de diatomeas ofrece múltiples beneficios en el sector
-                        agrícola.
-                    </p>
+<section id="beneficios-agricultura" class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 mb-3">Beneficios en la Agricultura</h2>
+                <p class="lead">
+                    La tierra de diatomeas ofrece múltiples beneficios en el sector
+                    agrícola.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Control de Plagas -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-bug fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Control de Plagas</h3>
+                        <p class="mb-0">
+                            Actúa como un insecticida natural y efectivo,
+                            protegiendo tanto los cultivos en el campo como los granos almacenados.
+                            Su capacidad para deshidratar y eliminar insectos lo convierte en una opción segura y ecológica.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <!-- Control de Plagas -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-bug fa-2x"></i>
-                                </div>
+            <!-- Mejora del Suelo -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-seedling fa-2x"></i>
                             </div>
-                            <h3 class="h4 mb-3">Control de Plagas</h3>
-                            <p class="mb-0">
-                                La tierra de diatomeas actúa como un insecticida natural,
-                                eliminando plagas como ácaros, pulgones y hormigas sin dañar
-                                el medio ambiente.
-                            </p>
                         </div>
+                        <h3 class="h4 mb-3">Fertilizante y Regenerador de Suelo</h3>
+                        <p class="mb-0">
+                            La tierra de diatomeas aporta micronutrientes esenciales que mejoran la calidad del suelo y
+                            la resistencia de las plantas a los insectos.
+                            Su uso regular puede contribuir a un crecimiento más saludable y robusto de los cultivos.
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Mejora del Suelo -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-seedling fa-2x"></i>
-                                </div>
+            <!-- Aporte de Silicio -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-leaf fa-2x"></i>
                             </div>
-                            <h3 class="h4 mb-3">Mejora del Suelo</h3>
-                            <p class="mb-0">
-                                Mejora la estructura del suelo, aumentando la retención de
-                                agua y nutrientes, lo que favorece el crecimiento de las
-                                plantas.
-                            </p>
                         </div>
+                        <h3 class="h4 mb-3">Protección contra Estrés</h3>
+                        <p class="mb-0">
+                            Proporciona silicio,
+                            un nutriente esencial que fortalece las plantas y
+                            las hace más resistentes a enfermedades y estrés ambiental.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="video-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 video-content">
+                    <h2 class="display-5 mb-4 text-success">Descubre el Poder Natural</h2>
+                    <p class="lead mb-4">La tierra de diatomeas es una opción segura y ecológica, respetuosa con el entorno, que ofrece ventajas considerables en diversas aplicaciones.</p>
+                    <ul class="list-unstyled fa-ul">
+                        <li class="mb-3"><span class="fa-li text-success"><i class="fas fa-check"></i></span>100%
+                            Ecológico y biodegradable</li>
+                        <li class="mb-3"><span class="fa-li text-success"><i class="fas fa-check"></i></span>Seguro para
+                            humanos y animales</li>
+                        <li class="mb-3"><span class="fa-li text-success"><i class="fas fa-check"></i></span>Efectivo
+                            control de plagas natural</li>
+                        <li class="mb-3"><span class="fa-li text-success"><i class="fas fa-check"></i></span>Mejora la
+                            calidad del suelo</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline-success btn-lg mt-3">Más Beneficios</a>
+                </div>
 
-                <!-- Aporte de Silicio -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-leaf fa-2x"></i>
-                                </div>
-                            </div>
-                            <h3 class="h4 mb-3">Aporte de Silicio</h3>
-                            <p class="mb-0">
-                                Proporciona silicio, un nutriente esencial que fortalece las
-                                plantas y las hace más resistentes a enfermedades y estrés
-                                ambiental.
-                            </p>
-                        </div>
+                <div class="col-md-6">
+                    <<div class="video-wrapper position-relative rounded-4 overflow-hidden shadow-lg">
+                        <video controls class="w-100"
+                            poster="../assets/img/tierra-de-diatomeas-slider.jpg">
+                            <source src="../assets/img/WhatsApp-Video-2024-05-27-at-12.51.24.mp4"
+                                type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <div class="video-overlay"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Usos en la Nutrición Animal -->
-    <section id="nutricion-animal" class="py-5 bg-light">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="display-5 mb-3">Usos en la Nutrición Animal</h2>
-                    <p class="lead">
-                        La tierra de diatomeas es un suplemento natural para la
-                        alimentación animal.
-                    </p>
+<section id="nutricion-animal" class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 mb-3">Usos en la Nutrición Animal</h2>
+                <p class="lead">
+                    La tierra de diatomeas es un suplemento natural para la
+                    alimentación animal.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Control de Parásitos -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-bug fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Complemento Alimentario</h3>
+                        <p class="mb-0">
+                            La tierra de diatomeas mejora la absorción de calcio en animales como vacas, cerdos y aves,
+                            lo que contribuye a una mejor producción de leche y salud general.
+                            Además, su inclusión en la dieta animal puede mejorar la calidad de los productos derivados,
+                            como la carne y los huevos.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <!-- Control de Parásitos -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover transition-all">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-bug fa-2x"></i> <!-- Icono corregido -->
-                                </div>
+            <!-- Suplemento Mineral -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-bone fa-2x"></i>
                             </div>
-                            <h3 class="h4 mb-3">Control de Parásitos</h3>
-                            <p class="mb-0">
-                                Elimina parásitos internos y externos en animales...
-                            </p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Mejora de la Digestión -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-hover transition-all">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-hand-holding-medical fa-2x"></i> <!-- Icono corregido -->
-                                </div>
-                            </div>
-                            <h3 class="h4 mb-3">Mejora de la Digestión</h3>
-                            <p class="mb-0">
-                                Ayuda a mejorar la digestión...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Suplemento Mineral -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-bone fa-2x"></i>
-                                </div>
-                            </div>
-                            <h3 class="h4 mb-3">Suplemento Mineral</h3>
-                            <p class="mb-0">
-                                Proporciona minerales esenciales que fortalecen el sistema
-                                inmunológico de los animales.
-                            </p>
-                        </div>
+                        <h3 class="h4 mb-3">Desparasitante</h3>
+                        <p class="mb-0">
+                            Funciona como un desparasitante interno y externo para animales, ayudando a mantener su salud y bienestar.
+                            Su uso regular puede prevenir infestaciones y mejorar la calidad de vida de los animales.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Aplicaciones Industriales -->
-    <section id="aplicaciones-industriales" class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="display-5 mb-3">Aplicaciones Industriales</h2>
-                    <p class="lead">
-                        La tierra de diatomeas tiene múltiples usos en la industria.
-                    </p>
+<!-- Aplicaciones Industriales -->
+<section id="aplicaciones-industriales" class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-5 mb-3">Aplicaciones Industriales</h2>
+                <p class="lead">
+                    La tierra de diatomeas tiene múltiples usos en la industria.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Filtración de Líquidos -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-filter fa-2x"></i>
+                            </div>
+                        </div>
+                        <h3 class="h4 mb-3">Sanidad de Cultivos y Frutales</h3>
+                        <p class="mb-0">
+                            Ayuda en la protección y sanidad de cultivos y frutales,
+                            actuando como una barrera física contra plagas y enfermedades.
+                            Su aplicación regular puede mejorar la calidad y el rendimiento de las cosechas.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <!-- Filtración de Líquidos -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-filter fa-2x"></i>
-                                </div>
+            <!-- Absorbente de Derrames -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3 text-center">
+                    <div class="card-body p-4">
+                        <div class="icon-wrapper mb-3">
+                            <div class="icon-circle bg-primary-gradient text-white mx-auto">
+                                <i class="fas fa-oil-can fa-2x"></i>
                             </div>
-                            <h3 class="h4 mb-3">Filtración de Líquidos</h3>
-                            <p class="mb-0">
-                                Se utiliza en la filtración de líquidos como cerveza, vino y
-                                aceites, gracias a su capacidad para retener impurezas.
-                            </p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Absorbente de Derrames -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-oil-can fa-2x"></i>
-                                </div>
-                            </div>
-                            <h3 class="h4 mb-3">Absorbente de Derrames</h3>
-                            <p class="mb-0">
-                                Es un absorbente natural para derrames de líquidos peligrosos,
-                                como aceites y químicos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aislamiento Térmico -->
-                <div class="col-md-4">
-                    <div
-                        class="card h-100 border-0 shadow-hover transition-all border border-success border-3 rounded-3">
-                        <div class="card-body p-4">
-                            <div class="icon-wrapper mb-3">
-                                <div class="icon-circle bg-primary-gradient text-white">
-                                    <i class="fas fa-fire fa-2x"></i>
-                                </div>
-                            </div>
-                            <h3 class="h4 mb-3">Aislamiento Térmico</h3>
-                            <p class="mb-0">
-                                Se utiliza como material aislante en la construcción y en la
-                                industria debido a sus propiedades térmicas.
-                            </p>
-                        </div>
+                        <h3 class="h4 mb-3">Absorbente Industrial</h3>
+                        <p class="mb-0">
+                            Gracias a su alta capacidad de absorción,
+                            la tierra de diatomeas se utiliza en diversas industrias para manejar derrames
+                            y absorber líquidos no deseados.
+                            Es especialmente útil en la industria química y de procesamiento de alimentos.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="contact-section py-5">
@@ -361,7 +507,7 @@
                                     </div>
                                     <div>
                                         <h4 class="h6 mb-1">Teléfono</h4>
-                                        <a href="tel:+5493416103411" class="text-dark text-decoration-none">
+                                        <a href="tel:+5493424464098" class="text-dark text-decoration-none">
                                             +54 9 341 610-3411
                                         </a>
                                     </div>
@@ -399,17 +545,17 @@
                         <div class="mt-5">
                             <h4 class="h6 mb-4">Síguenos en:</h4>
                             <div class="d-flex gap-3">
-                                <a href="#" class="social-link-material">
+                                <a href="https://www.facebook.com/share/15pRQXwb6k/?mibextid=wwXIfr" class="social-link-material">
                                     <div class="social-icon-material">
                                         <i class="fab fa-facebook-f"></i>
                                     </div>
                                 </a>
-                                <a href="#" class="social-link-material">
+                                <a href="https://www.instagram.com/danexo_sa/profilecard/?igsh=emJmYzlqdGY0bTll" class="social-link-material">
                                     <div class="social-icon-material">
                                         <i class="fab fa-instagram"></i>
                                     </div>
                                 </a>
-                                <a href="#" class="social-link-material">
+                                <a href="https://wa.me/+5493424464098?text=Hola%20quiero%20saber%20más%20sobre%20tus%20servicios" class="social-link-material">
                                     <div class="social-icon-material">
                                         <i class="fab fa-whatsapp"></i>
                                     </div>
@@ -477,17 +623,17 @@
                         nuestros productos y servicios.
                     </p>
                     <div class="social-icons-large d-flex gap-4">
-                        <a href="#" class="social-link-material" aria-label="Facebook">
+                        <a href="https://www.facebook.com/share/15pRQXwb6k/?mibextid=wwXIfr" class="social-link-material" aria-label="Facebook">
                             <div class="social-icon-material">
                                 <i class="fab fa-facebook-f"></i>
                             </div>
                         </a>
-                        <a href="#" class="social-link-material" aria-label="Instagram">
+                        <a href="https://www.instagram.com/danexo_sa/profilecard/?igsh=emJmYzlqdGY0bTll" class="social-link-material" aria-label="Instagram">
                             <div class="social-icon-material">
                                 <i class="fab fa-instagram"></i>
                             </div>
                         </a>
-                        <a href="#" class="social-link-material" aria-label="WhatsApp">
+                        <a href="https://wa.me/+5493424464098?text=Hola%20quiero%20saber%20más%20sobre%20tus%20servicios" class="social-link-material" aria-label="WhatsApp">
                             <div class="social-icon-material">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
@@ -648,26 +794,25 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
-<script>
-    tsParticles.load("tsparticles", {
-        particles: {
-            number: { value: 30 },
-            color: { value: "#28a745" },
-            opacity: { value: 0.3 },
-            size: { value: 1 },
-            move: {
-                enable: true,
-                speed: 0.5,
-                direction: "none",
-                random: true,
+    <script>
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: { value: 30 },
+                color: { value: "#28a745" },
+                opacity: { value: 0.3 },
+                size: { value: 1 },
+                move: {
+                    enable: true,
+                    speed: 0.5,
+                    direction: "none",
+                    random: true,
+                },
             },
-        },
-        background: {
-            color: "transparent",
-        },
-    });
-</script>
-
+            background: {
+                color: "transparent",
+            },
+        });
+    </script>
 </body>
 
 </html>
